@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gundam product</title>
+    <link rel="stylesheet" href="../../Components/global.css" />
+    <link rel="stylesheet" href="./cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body onclick="bodyClick()">
+    <header id="header"></header>
+    <section class="cart">
+      <div class="cart_product">
+        <table>
+          <tr class="cart_product_head">
+            <th><p>Product</p></th>
+            <th><p>Name</p></th>
+            <th>
+              <p>Quantity</p>
+            </th>
+            <th><p>Discount</p></th>
+            <th>
+              <p>Total price</p>
+            </th>
+          </tr>
+          <tbody id="cart_list"></tbody>
+        </table>
+      </div>
+      <div class="cart_customer"></div>
+
+      <div class="cart_checkout">
+        <h4>CHECKOUT INFORMATION</h4>
+        <div class="checkout_body">
+          <!-- <div class="user_box">
+            <i class="fa-solid fa-user"></i>
+            <input
+              type="text"
+              id="user_fullName"
+              placeholder="Your first-Last name..."
+            />
+          </div> -->
+          <div class="user_box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input
+              type="text"
+              id="user_address"
+              placeholder="Your address..."
+              required
+            />
+          </div>
+          <div class="user_box">
+            <div class="total_price_box">
+              <p>Your Total:</p>
+              <p id="total_price_of_products" style="color: rgb(23, 101, 236)">
+                $ 0
+              </p>
+            </div>
+          </div>
+          <!-- <div class="user_box">
+            <i class="fa-solid fa-phone"></i>
+            <input type="text" id="user_Phone" placeholder="Phone Number..." />
+          </div> -->
+          <!-- <button class="wayToPay tranfer">Transfer Upfront</button> -->
+          <button class="wayToPay cod" onclick="onConfirmPay()">
+            COD Payment
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="total_price_cart">
+      <p>Total :</p>
+      <p id="totalPriceOfCart" style="color: rgb(23, 101, 236)">$ 0</p>
+    </div>
+    <div id="mini_search"></div>
+
+    <div class="store">
+      <h1 id="title_product"></h1>
+      <div class="store_sort"></div>
+    </div>
+    <div id="footer"></div>
+    <div id="flow_contract"></div>
+    <script src="../../Components/header.js"></script>
+    <script src="../../Services/addCart.service.js"></script>
+    <script src="../../Services/onConfirmPay.service.js"></script>
+    <script src="../../Repositories/repositories.js"></script>
+    <script src="../../Components/flowIcon.js"></script>
+    <script src="../../Components/footer.js"></script>
+    <script src="../../Services/renderAvatar.service.js"></script>
+    <script src="./cart.js"></script>
+    <script>
+      renderHeader();
+      renderFooter();
+      renderFlow();
+      renderAvatarUser();
+    </script>
+  </body>
+</html>

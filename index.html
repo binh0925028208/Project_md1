@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gundam market</title>
+    <link rel="stylesheet" href="./Components/global.css" />
+    <link rel="stylesheet" href="/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body onclick="bodyClick()">
+    <div id="header"></div>
+    <section class="banner">
+      <div class="banner_img">
+        <button onclick="prevBtn()">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <img id="banner_image" src="./Assets/banner_img/banner_01.jpg" alt="" />
+        <button onclick="nextBtn()">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <div id="mini_search" style="padding-top: 0"></div>
+      <div class="banner_infor">
+        <div class="banner_infor_box">
+          <div class="banner_infor_logo">
+            <i class="fa-solid fa-square-phone"></i>
+          </div>
+          <div class="banner_infor_text">
+            <h2>0123 333 333</h2>
+            <p>HOTLINE 24/7</p>
+          </div>
+        </div>
+        <div class="banner_infor_box">
+          <div class="banner_infor_logo">
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <div class="banner_infor_text">
+            <h2>100% OFFICIAL</h2>
+            <p>Guaranteed no fake</p>
+          </div>
+        </div>
+        <div class="banner_infor_box">
+          <div class="banner_infor_logo">
+            <i class="fa-solid fa-truck"></i>
+          </div>
+          <div class="banner_infor_text">
+            <h2>SHIP WHOLE COUNTRY</h2>
+            <p>Freeship around 10km</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="web_body">
+      <div class="web_sidebar">
+        <div class="side_menu">
+          <div class="side_menu_head">
+            <p>OUR GUNDAM PRODUCTS</p>
+          </div>
+          <button data="mg" class="sideIndex">MG 1/100</button>
+          <button data="pg" class="sideIndex">PG 1/60</button>
+          <button data="hg" class="sideIndex">HG 1/144</button>
+          <button data="rg" class="sideIndex">RG 1/144</button>
+          <button data="mb" class="sideIndex">METAL BUILD</button>
+          <button data="ms" class="sideIndex">MEGA SIZE</button>
+          <button data="rs" class="sideIndex">ROBOT SPIRITS</button>
+          <button data="hr" class="sideIndex">HI-RES</button>
+          <button data="sd" class="sideIndex">SD</button>
+          <!-- <button data="chokin" class="sideIndex">CHOGOKIN</button>
+          <button data="af" class="sideIndex">ACTION FIGURE</button>
+          <button data="ga" class="sideIndex">GASHAPON</button>
+          <button data="too" class="sideIndex">TOOL/MARKER/PAINT</button>
+          <button data="acc" class="sideIndex">ACCESSORIES</button> -->
+        </div>
+        <div class="side_menu2">
+          <div class="side_menu_head2">
+            <p>OUR TERM</p>
+          </div>
+          <div class="side_menu_term_infor">
+            <div class="side_menu_term_logo">
+              <img src="./Assets/img/badge-600x600.jpg" alt="" />
+            </div>
+            <div class="side_menu_term_text">
+              <h2>COPYRIGHT</h2>
+              <p>100% Official</p>
+            </div>
+          </div>
+          <div class="side_menu_term_infor">
+            <div class="side_menu_term_logo">
+              <img
+                src="./Assets/img/Papirus-Team-Papirus-Apps-System-software-update-800x800.jpg"
+                alt=""
+              />
+            </div>
+            <div class="side_menu_term_text">
+              <h2>UPDATE</h2>
+              <p>Update daily</p>
+            </div>
+          </div>
+          <div class="side_menu_term_infor">
+            <div class="side_menu_term_logo">
+              <img src="./Assets/img/Thanhtoan.jpg" alt="" />
+            </div>
+            <div class="side_menu_term_text">
+              <h2>PAY CARD</h2>
+              <p>100% Sercurity</p>
+            </div>
+          </div>
+          <div class="side_menu_term_infor">
+            <div class="side_menu_term_logo">
+              <img src="./Assets/img/muahang.jpg" alt="" />
+            </div>
+            <div class="side_menu_term_text">
+              <h2>BUYING</h2>
+              <p>Easily access</p>
+            </div>
+          </div>
+          <div class="side_menu_term_infor">
+            <div class="side_menu_term_logo">
+              <img src="./Assets/img/vanchuyen.png" alt="" />
+            </div>
+            <div class="side_menu_term_text">
+              <h2>SHIPPING</h2>
+              <p>Fast and safe</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="store">
+        <h1 id="title_product"></h1>
+        <div class="store_sort">
+          <div class="store_new">
+            <div class="store_title">
+              <i class="fa-solid fa-arrow-down" style="color: red"></i>
+              <h2>Just arrived :</h2>
+            </div>
+            <div class="store_product_list">
+              <div class="store_product">
+                <div class="product_img">
+                  <img
+                    src="./Assets/img_product/sp_1.jpg"
+                    alt=""
+                    onclick="searchIdProduct(1)"
+                  />
+                </div>
+                <h4 onclick="searchIdProduct(1)">
+                  HI-RESOLUTION Astray Gundam
+                </h4>
+                <p>75$</p>
+                <button class="buyBtn" onclick="onAddToCart(1)">
+                  ADD TO CART
+                </button>
+              </div>
+              <div class="store_product">
+                <div class="product_img">
+                  <img
+                    src="./Assets/img_product/sp_2.jpg"
+                    alt=""
+                    onclick="searchIdProduct(2)"
+                  />
+                </div>
+                <h4 onclick="searchIdProduct(2)">SD 78-RX-2 Gundam</h4>
+                <p>15$</p>
+                <button class="buyBtn" onclick="onAddToCart(2)">
+                  ADD TO CART
+                </button>
+              </div>
+              <div class="store_product">
+                <div class="product_img">
+                  <img
+                    src="./Assets/img_product/sp_3.jpg"
+                    alt=""
+                    onclick="searchIdProduct(3)"
+                  />
+                </div>
+                <h4 onclick="searchIdProduct(3)">RG God Gundam</h4>
+                <p>30$</p>
+                <button class="buyBtn" onclick="onAddToCart(3)">
+                  ADD TO CART
+                </button>
+              </div>
+              <div class="store_product">
+                <div class="product_img">
+                  <img
+                    src="./Assets/img_product/sp_4.jpg"
+                    alt=""
+                    onclick="searchIdProduct(4)"
+                  />
+                </div>
+                <h4 onclick="searchIdProduct(4)">HG GN-001 Exia Gundam</h4>
+                <p>22$</p>
+                <button class="buyBtn" onclick="onAddToCart(4)">
+                  ADD TO CART
+                </button>
+              </div>
+              <div class="store_product">
+                <div class="product_img">
+                  <img
+                    src="./Assets/img_product/sp_30.jpg"
+                    alt=""
+                    onclick="searchIdProduct(30)"
+                  />
+                </div>
+                <h4 onclick="searchIdProduct(30)">
+                  SDW Heroes Arthur Gundam Mk-III
+                </h4>
+                <p>36$</p>
+                <button class="buyBtn" onclick="onAddToCart(30)">
+                  ADD TO CART
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="store_new">
+            <div class="store_title">
+              <i class="fa-solid fa-fire" style="color: red"></i>
+              <h2>Hot sell :</h2>
+            </div>
+            <div class="store_product_list">
+              <div class="store_product">
+                <div class="product_img">
+                  <img
+                    src="./Assets/img_product/sp_5.jpg"
+                    alt=""
+                    onclick="searchIdProduct(5)"
+                  />
+                </div>
+                <h4 onclick="searchIdProduct(5)">
+                  SD 02 Unicorn Banshee Gundam
+                </h4>
+                <p>10$</p>
+                <button class="buyBtn" onclick="onAddToCart(5)">
+                  ADD TO CART
+                </button>
+              </div>
+              <div class="store_product">
+                <div class="product_img">
+                  <img
+                    src="./Assets/img_product/sp_6.jpg"
+                    alt=""
+                    onclick="searchIdProduct(6)"
+                  />
+                </div>
+                <h4 onclick="searchIdProduct(6)">MG Buster Gundam</h4>
+                <p>35$</p>
+                <button class="buyBtn" onclick="onAddToCart(6)">
+                  ADD TO CART
+                </button>
+              </div>
+              <div class="store_product">
+                <div class="product_img">
+                  <img
+                    src="./Assets/img_product/sp_7.jpg"
+                    alt=""
+                    onclick="searchIdProduct(7)"
+                  />
+                </div>
+                <h4 onclick="searchIdProduct(7)">PG Exia Gundam</h4>
+                <p>85$</p>
+                <button class="buyBtn" onclick="onAddToCart(7)">
+                  ADD TO CART
+                </button>
+              </div>
+              <div class="store_product">
+                <div class="product_img">
+                  <img
+                    src="./Assets/img_product/sp_8.jpg"
+                    alt=""
+                    onclick="searchIdProduct(8)"
+                  />
+                </div>
+                <h4 onclick="searchIdProduct(8)">
+                  Metail Build Freedoom Gundam
+                </h4>
+                <p>85$</p>
+                <button class="buyBtn" onclick="onAddToCart(8)">
+                  ADD TO CART
+                </button>
+              </div>
+              <div class="store_product">
+                <div class="product_img">
+                  <img
+                    src="./Assets/img_product/sp_31.jpg"
+                    alt=""
+                    onclick="searchIdProduct(31)"
+                  />
+                </div>
+                <h4 onclick="searchIdProduct(31)">SD Gundam RX-78 GPO3D</h4>
+                <p>22$</p>
+                <button class="buyBtn" onclick="onAddToCart(31)">
+                  ADD TO CART
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="store_new">
+            <div class="store_title">
+              <i class="fa-solid fa-heart" style="color: red"></i>
+              <h2>You may like :</h2>
+            </div>
+            <div class="store_product_list">
+              <div class="store_product">
+                <div class="product_img">
+                  <img
+                    src="./Assets/img_product/sp_9.jpg"
+                    alt=""
+                    onclick="searchIdProduct(9)"
+                  />
+                </div>
+                <h4 onclick="searchIdProduct(9)">HG Gundam Avalanche Exia</h4>
+                <p>27$</p>
+                <button class="buyBtn" onclick="onAddToCart(9)">
+                  ADD TO CART
+                </button>
+              </div>
+              <div class="store_product">
+                <div class="product_img">
+                  <img
+                    src="./Assets/img_product/sp_10.jpg"
+                    alt=""
+                    onclick="searchIdProduct(10)"
+                  />
+                </div>
+                <h4 onclick="searchIdProduct(10)">
+                  HGBF Sengoku Astray Gundam
+                </h4>
+                <p>25 $</p>
+                <button class="buyBtn">ADD TO CART</button>
+              </div>
+              <div class="store_product">
+                <div class="product_img">
+                  <img
+                    src="./Assets/img_product/sp_11.jpg"
+                    alt=""
+                    onclick="searchIdProduct(11)"
+                  />
+                </div>
+                <h4 onclick="searchIdProduct(11)">MG Barbatos Gundam</h4>
+                <p>45$</p>
+                <button class="buyBtn" onclick="onAddToCart(11)">
+                  ADD TO CART
+                </button>
+              </div>
+              <div class="store_product">
+                <div class="product_img">
+                  <img src="./Assets/img_product/sp_12.jpg" alt="" />
+                </div>
+                <h4 onclick="searchIdProduct(12)">MG Gundam Kyrios</h4>
+                <p>45$</p>
+                <button class="buyBtn" onclick="onAddToCart(12)">
+                  ADD TO CART
+                </button>
+              </div>
+              <div class="store_product">
+                <div class="product_img">
+                  <a href="">
+                    <img
+                      src="./Assets/img_product/sp_34.jpg"
+                      alt=""
+                      onclick="searchIdProduct(34)"
+                    />
+                  </a>
+                </div>
+                <h4 onclick="searchIdProduct(34)">HGUC 1/144 Astaroth</h4>
+                <p>23$</p>
+                <button class="buyBtn" onclick="onAddToCart(34)">
+                  ADD TO CART
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="video">
+      <div class="video_box">
+        <div class="video_box_text">
+          <h4>New to this ?</h4>
+          <p>
+            This hobby need to learn several things first, for your own safety,
+            watch these video.
+          </p>
+        </div>
+        <iframe
+          width="400"
+          height="300"
+          src="https://www.youtube.com/embed/56sV0DPVBYo"
+          title="Beginner Gunpla Tool Kit ESSENTIALS"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="400"
+          height="300"
+          src="https://www.youtube.com/embed/xMxiXU0RCuM"
+          title="Best Model Kits for Beginners | Top Five Kits to Get Started"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+    <div class="bor"></div>
+    <div id="footer"></div>
+    <div id="flow_contract"></div>
+    <script src="./Models/usersDB.js"></script>
+    <script src="./Components/header.js"></script>
+    <script src="./Services/renderAvatar.service.js"></script>
+    <script src="./index.js"></script>
+    <script src="./Repositories/repositories.js"></script>
+    <script src="./Components/flowIcon.js"></script>
+    <script src="./Components/footer.js"></script>
+    <script src="./Services/addCart.service.js"></script>
+    <script src="./Services/renderProductBySideMenu.service.js"></script>
+    <script>
+      renderHeader();
+      renderAvatarUser();
+      renderFooter();
+      renderFlow();
+      renderProducts();
+    </script>
+  </body>
+</html>

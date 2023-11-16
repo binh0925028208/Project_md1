@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gundam login</title>
+    <link rel="stylesheet" href="../../Components/global.css" />
+    <link rel="stylesheet" href="../../pages/login/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header id="header"></header>
+    <section class="login">
+      <div class="login_body">
+        <div class="login_main">
+          <div class="display_login_box">
+            <div class="login_box">
+              <div class="login_button">
+                <button class="user_button">
+                  <i class="fa-regular fa-user"></i>
+                </button>
+                <button class="register_button" onclick="showRegister()">
+                  <i class="fa-regular fa-registered"></i>
+                </button>
+              </div>
+              <div class="login_user">
+                <div class="id_box">
+                  <i class="fa-regular fa-user fa-beat-fade"></i>
+                  <input
+                    type="email"
+                    id="user_email"
+                    placeholder="Your email"
+                  />
+                </div>
+                <div class="id_box">
+                  <i class="fa-regular fa-eye fa-beat-fade"></i>
+                  <input
+                    type="password"
+                    id="user_pass"
+                    placeholder="Your password"
+                  />
+                </div>
+                <button onclick="loginSubmit()" class="sign_btn">
+                  Sign in
+                </button>
+                <button onclick="showRegister()" class="bottom_option">
+                  Not a member?, join us
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="display_register_box">
+            <div class="register_box">
+              <div class="login_button">
+                <button class="register_button_box2">
+                  <i class="fa-regular fa-registered"></i>
+                </button>
+                <button class="user_button_box2" onclick="showLogin()">
+                  <i class="fa-regular fa-user"></i>
+                </button>
+              </div>
+              <div class="login_user">
+                <div class="id_box">
+                  <i class="fa-regular fa-address-card"></i>
+                  <input
+                    type="text"
+                    id="register_name"
+                    placeholder="Your first-Last Name"
+                  />
+                </div>
+                <div class="id_box">
+                  <i class="fa-solid fa-envelope"></i>
+                  <input
+                    type="email"
+                    id="register_email"
+                    placeholder="Your email"
+                  />
+                </div>
+                <div class="id_box">
+                  <i class="fa-solid fa-phone-volume"></i>
+                  <input
+                    type="number"
+                    id="register_phone"
+                    placeholder="Your phone"
+                  />
+                </div>
+                <div class="id_box">
+                  <i class="fa-solid fa-eye"></i>
+                  <input
+                    type="password"
+                    id="register_password"
+                    placeholder="Your password"
+                  />
+                </div>
+                <div class="id_box">
+                  <i class="fa-solid fa-eye"></i>
+                  <input
+                    type="password"
+                    id="register_confirmPassword"
+                    placeholder="Confirm password"
+                  />
+                </div>
+                <button onclick="registerSubmit()" class="sign_btn">
+                  Create Now
+                </button>
+                <button onclick="showLogin()" class="bottom_option">
+                  Already a member?, login now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer"></footer>
+    <div id="flow_contract" class="flow_infor"></div>
+    <script src="./login.js"></script>
+    <script src="../../Components/header.js"></script>
+    <script src="../../Repositories/repositories.js"></script>
+    <script src="../../Components/flowIcon.js"></script>
+    <script src="../../Components/footer.js"></script>
+    <script>
+      renderHeader();
+      renderFooter();
+      renderFlow();
+    </script>
+  </body>
+</html>

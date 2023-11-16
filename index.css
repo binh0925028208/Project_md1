@@ -1,0 +1,303 @@
+.banner {
+    padding-top: 120px;
+}
+
+.banner_img {
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+
+
+}
+
+.banner_img img {
+    width: 100vw;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.banner_img button {
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    opacity: 0.5;
+}
+
+.banner_infor {
+    background-image: linear-gradient(to right, #0AD0D2, rgb(37, 113, 228));
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    height: 120px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.banner_infor_text * {
+    color: white;
+}
+
+.banner_infor_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.banner_infor_box i {
+    color: white;
+}
+
+.banner_infor_logo {
+    font-size: 55px;
+}
+
+/* ------------------banner */
+.web_body {
+    padding: 20px 10px 20px 20px;
+    position: relative;
+    display: flex;
+}
+
+.web_sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sideIndex.active {
+    background-color: rgb(52, 50, 50);
+    ;
+    color: rgb(255, 247, 247);
+    font-size: 20px;
+    border: none;
+}
+
+.side_menu {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.side_menu_head {
+    background-color: rgb(52, 50, 50);
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+
+}
+
+.side_menu_head p {
+    color: white
+}
+
+.side_menu button {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    cursor: pointer;
+
+}
+
+.side_menu button:hover {
+    background-image: linear-gradient(to right, rgb(71, 231, 231), rgb(185, 205, 235));
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.side_menu_term_logo img {
+    width: 50px;
+}
+
+.side_menu_term_infor {
+    display: flex;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.side_menu_term_text h2,
+p {
+    color: black;
+}
+
+.side_menu2 {
+    background-color: #f8fcfc;
+    width: 250px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 350px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+
+}
+
+.side_menu_head2 {
+    background-color: rgb(52, 50, 50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.side_menu_head2 * {
+    color: white;
+}
+
+/* --------------sidemenu */
+
+.store {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+
+#title_product {
+    color: #726c6c;
+    font-size: 35px;
+    padding: 10px 0 10px 20px;
+}
+
+.storeSortList,
+.storeSortListAfterSearch {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+    padding: 30px 0 0 30px;
+}
+
+.store_title h2 {
+    color: red;
+}
+
+.store_new {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.store_product_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0 10px 30px;
+    gap: 30px;
+}
+
+.store_title {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    gap: 10px;
+}
+
+.product_img img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.product_img img:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.store_product {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    color: black;
+
+}
+
+.store_product h4 {
+    color: black;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.buyBtn {
+    background-color: rgb(88, 86, 86);
+    width: 150px;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.buyBtn:hover {
+    background-color: rgb(243, 84, 84);
+    color: black;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.5s;
+}
+
+
+
+/* ---------------store */
+.video {
+    padding-top: 30px;
+
+}
+
+.video_box {
+    background-image: url(/assets/img/back.jpg);
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.video_box_text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video_box_text h4 {
+    font-size: 40px;
+    color: #0085C7;
+}
+
+.video_box_text p {
+    color: white;
+    width: 300px;
+}
+
+
+/* ----------------video */

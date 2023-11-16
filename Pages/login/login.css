@@ -1,0 +1,174 @@
+.login {
+    padding-top: 120px;
+    width: 100vw;
+    height: auto;
+    position: relative;
+}
+
+.login_body {
+    background-image: url(/assets/img/loginback.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 650px;
+
+}
+
+.login_main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+
+.login_box,
+.register_box {
+    width: 400px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 20px;
+}
+
+.login_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.id_box {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.id_box input {
+    height: 40px;
+    width: 300px;
+    padding: 20px 20px 20px 40px;
+    border-radius: 20px;
+    border: none;
+    flex: 1;
+}
+
+.id_box i {
+    position: absolute;
+    color: black;
+    top: 12px;
+    left: 14px;
+
+}
+
+.register_button {
+    background-color: white;
+    width: 50px;
+    height: 60px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-size: 30px;
+    border: none;
+
+}
+
+.user_button {
+    background-color: rgb(52, 50, 50);
+    width: 250px;
+    height: 60px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    font-size: 30px;
+    border: none;
+}
+
+.user_button i {
+    color: white;
+}
+
+.sign_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 150px;
+    background-color: rgb(52, 50, 50);
+    height: 40px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: white;
+
+}
+
+.sign_btn:hover {
+    background-color: rgb(243, 74, 40);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.bottom_option {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+}
+
+.bottom_option:hover {
+    color: rgb(243, 74, 40);
+}
+
+/* login user*/
+.register_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.user_button_box2 {
+    background-color: rgb(52, 50, 50);
+    width: 50px;
+    height: 60px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-size: 30px;
+    border: none;
+}
+
+.register_button_box2 {
+    background-color: white;
+    width: 250px;
+    height: 60px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    font-size: 30px;
+    border: none;
+
+}
+
+.user_button_box2 i {
+    color: white;
+}
+
+.display_register_box {
+    display: none;
+}

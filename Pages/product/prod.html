@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gundam product</title>
+    <link rel="stylesheet" href="../../Components/global.css" />
+    <link rel="stylesheet" href="../../Pages/product/prod.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body onclick="bodyClick()">
+    <div id="header"></div>
+    <section class="prod"></section>
+    <div class="border_line"></div>
+    <section class="familiar_prod">
+      <div class="familiar_title">
+        <h4>PEOPLE ALSO LIKE :</h4>
+      </div>
+      <div class="familiar_product_line" id="storebBody"></div>
+    </section>
+    <!-- <div class="buying_box">
+      <div class="prod_mini_pic">
+        <img src="../../assets/img/sp_1.jpg" alt="" />
+      </div>
+      <h6>HI-RESOLUTION GUNDAM ASTRAY RED FRAME</h6>
+      <div class="prod_mini_price">
+        <p>75$</p>
+      </div>
+      <div class="prod_infor_quantity">
+        <div class="prod_infor_addToCart">
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div> -->
+    <div id="mini_search"></div>
+    <div class="store">
+      <h1 id="title_product"></h1>
+      <div class="store_sort"></div>
+    </div>
+    <div id="footer"></div>
+    <div id="flow_contract"></div>
+    <script src="./prod.js"></script>
+    <script src="../../Components/header.js"></script>
+    <script src="../../Services/addCart.service.js"></script>
+    <script src="../../Repositories/repositories.js"></script>
+    <script src="../../Components/flowIcon.js"></script>
+    <script src="../../Components/footer.js"></script>
+    <script src="../../Services/renderAvatar.service.js"></script>
+    <script>
+      renderHeader();
+      renderFooter();
+      renderFlow();
+      renderAvatarUser();
+    </script>
+  </body>
+</html>
