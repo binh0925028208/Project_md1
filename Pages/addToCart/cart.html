@@ -18,20 +18,26 @@
     <header id="header"></header>
     <section class="cart">
       <div class="cart_product">
-        <table>
-          <tr class="cart_product_head">
-            <th><p>Product</p></th>
-            <th><p>Name</p></th>
+        <table class="cart_product_head">
+          <tr>
+            <th><p>PRODUCT</p></th>
+            <th><p>NAME</p></th>
             <th>
-              <p>Quantity</p>
+              <p>QUANTITY</p>
             </th>
-            <th><p>Discount</p></th>
+            <th><p>DISCOUNT</p></th>
             <th>
-              <p>Total price</p>
+              <p>PRICE</p>
             </th>
           </tr>
           <tbody id="cart_list"></tbody>
         </table>
+        <img
+          src="../../Assets/img/empty_cart.png"
+          alt=""
+          style="margin-left: 200px"
+          id="emptyImg"
+        />
       </div>
       <div class="cart_customer"></div>
 
@@ -52,7 +58,7 @@
               type="text"
               id="user_address"
               placeholder="Your address..."
-              required
+              minlength="8"
             />
           </div>
           <div class="user_box">
@@ -86,6 +92,7 @@
     </div>
     <div id="footer"></div>
     <div id="flow_contract"></div>
+    <script src="../../Models/ordersDB.js"></script>
     <script src="../../Components/header.js"></script>
     <script src="../../Services/addCart.service.js"></script>
     <script src="../../Services/onConfirmPay.service.js"></script>

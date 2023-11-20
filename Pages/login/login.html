@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gundam login</title>
+    <title>User Login</title>
     <link rel="stylesheet" href="../../Components/global.css" />
     <link rel="stylesheet" href="../../pages/login/login.css" />
+    <link
+      rel="shortcut icon"
+      href="../../Assets/img/favicon.ico"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -36,6 +41,7 @@
                     type="email"
                     id="user_email"
                     placeholder="Your email"
+                    required
                   />
                 </div>
                 <div class="id_box">
@@ -44,6 +50,7 @@
                     type="password"
                     id="user_pass"
                     placeholder="Your password"
+                    required
                   />
                 </div>
                 <button onclick="loginSubmit()" class="sign_btn">
@@ -72,6 +79,7 @@
                     type="text"
                     id="register_name"
                     placeholder="Your first-Last Name"
+                    required
                   />
                 </div>
                 <div class="id_box">
@@ -80,6 +88,7 @@
                     type="email"
                     id="register_email"
                     placeholder="Your email"
+                    required
                   />
                 </div>
                 <div class="id_box">
@@ -88,6 +97,7 @@
                     type="number"
                     id="register_phone"
                     placeholder="Your phone"
+                    required
                   />
                 </div>
                 <div class="id_box">
@@ -96,6 +106,9 @@
                     type="password"
                     id="register_password"
                     placeholder="Your password"
+                    required
+                    minlength="8"
+                    maxlength="16"
                   />
                 </div>
                 <div class="id_box">
@@ -104,6 +117,9 @@
                     type="password"
                     id="register_confirmPassword"
                     placeholder="Confirm password"
+                    required
+                    minlength="8"
+                    maxlength="16"
                   />
                 </div>
                 <button onclick="registerSubmit()" class="sign_btn">

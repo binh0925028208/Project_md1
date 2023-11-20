@@ -1,11 +1,12 @@
 const users = [
   {
-    id: 1,
-    fullName: "Fullname",
-    email: "email",
-    password: "12222",
-    role: 1, //1 là admin, 2 là khách
-    status: 1, //1 là active, 2 là block
+    id: 0,
+    fullName: "bình",
+    email: "1@gmail.com",
+    number: "0925028208",
+    password: "12345678",
+    role: 2,
+    status: 1,
     cart: [],
   },
 ];

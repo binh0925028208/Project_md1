@@ -17,22 +17,30 @@ function registerSubmit() {
     return email.value === item.email;
   });
   if (checkingEmail) {
-    alert("This email already registered");
+    alert("This email already registered !");
   } else {
     if (password.value !== confirmPass.value) {
-      alert("Your Password and confirm-password is not the same");
+      alert("Your Password and confirm-password is not the same !");
     } else {
-      userData.push({
-        id: userData[userData.length - 1].id + 1,
-        fullName: name.value,
-        email: email.value,
-        number: phone.value,
-        password: password.value,
-        role: 2,
-        cart: [],
-        status: 1,
-      });
-      showLogin();
+      if (password.value.length <= 7) {
+        alert("Your Password must have minimum 8 characters !");
+      } else {
+        if (phone.value.length <= 7) {
+          alert("Your phone number must have minimum 9 numbers !");
+        } else {
+          userData.push({
+            id: userData[userData.length - 1].id + 1,
+            fullName: name.value,
+            email: email.value,
+            number: phone.value,
+            password: password.value,
+            role: 2,
+            cart: [],
+            status: 1,
+          });
+          showLogin();
+        }
+      }
     }
   }
   localStorage.setItem("users", JSON.stringify(userData));
@@ -50,10 +58,17 @@ function loginSubmit() {
     return item.email == email.value && item.password == password.value;
   });
   if (checkLogin) {
-    userStillLoginData = checkLogin;
-    localStorage.setItem("userStillLogin", JSON.stringify(userStillLoginData));
-    document.getElementById("cart_quantity").style.visibility = "visible";
-    window.location.href = "http://127.0.0.1:5500/index.html";
+    if (checkLogin.status == 1) {
+      userStillLoginData = checkLogin;
+      localStorage.setItem(
+        "userStillLogin",
+        JSON.stringify(userStillLoginData)
+      );
+      document.getElementById("cart_quantity").style.visibility = "visible";
+      window.location.href = "http://127.0.0.1:5500/index.html";
+    } else {
+      alert("this account is banned, please contract us !");
+    }
   } else {
     alert("Email/ password is not correct, please try again");
   }

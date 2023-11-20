@@ -30,11 +30,12 @@ function renderHeader() {
       </div>
       <div class ="header_user_services">
       <div class="header_border"></div>
-      <div class="header_cart">
-      <a href="http://127.0.0.1:5500/Pages/addToCart/cart.html"> <i class="fa-solid fa-cart-plus"></i></a>
-        <p id="cart_quantity">2</p>
+      <div class="header_cart toolTip">
+      <i class="fa-solid fa-cart-plus"  onclick="onCartPage()"></i>
+        <p id="cart_quantity"></p>
+        <span class="toolTipText"> Show your cart.</span>
       </div>
-      <div class="header_user" id="user_avatar">
+      <div class="header_user"  id="user_avatar">
       <i class="fa-regular fa-user" onclick="onLogin()"></i>
       </div>
       </div>
@@ -44,19 +45,19 @@ function renderHeader() {
       <a href="../../index.html">HOME</a>
     </div>
     <div class="nav">
-      <a href="#">INTRODUCE</a>
+      <a href="#">!</a>
     </div>
     <div class="nav">
-      <a href="#">HOW TO BUY</a>
+      <a href="#">!</a>
     </div>
     <div class="nav">
-    <a href="#">VIDEO CLIP</a>
+    <a href="#">!</a>
     </div>
     <div class="nav">
-    <a href="#">NEWS</a>
+    <a href="#">!</a>
     </div>
     <div class="nav">
-    <a href="#">CONTRACT US</a>
+    <a href="#">!</a>
     </div>
     </div>
     </section>`;
@@ -74,9 +75,10 @@ function searchFeature() {
   if (input.value !== "") {
     document.getElementById("searchList").style.display = "block";
     const searchProducts = products.filter(function (element, index) {
-      return element.productName
-        .toLowerCase()
-        .includes(input.value.toLowerCase());
+      return (
+        element.productName.toLowerCase().includes(input.value.toLowerCase()) &&
+        element.isDelete == 1
+      );
     });
     searchList.innerHTML = "";
     if (searchProducts.length) {
@@ -147,5 +149,13 @@ function onLogOut() {
     window.location.reload();
   } else {
     popUp = "Have a nice day!";
+  }
+}
+function onCartPage() {
+  let userStillLoginDB = getAllItems("userStillLogin");
+  if (userStillLoginDB.length != 0) {
+    window.location.href = "http://127.0.0.1:5500/Pages/addToCart/cart.html";
+  } else {
+    window.location.href = "http://127.0.0.1:5500/Pages/login/login.html";
   }
 }

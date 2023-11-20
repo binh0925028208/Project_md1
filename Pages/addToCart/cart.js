@@ -9,6 +9,8 @@ function renderProductCart() {
   let priceOfProduct = 0;
   productInCart.forEach((item) => {
     if (item.quantity > 0) {
+      document.getElementById("emptyImg").style.display = "none";
+      document.querySelector(".cart_product_head").style.display = "block";
       priceOfProduct += item.price * item.quantity;
       cartDetail.innerHTML += `
                   <tr class="cart_prod">
@@ -22,9 +24,9 @@ function renderProductCart() {
                       <button onclick="onDownQuantity(${
                         item.id
                       })"><i class="fa-solid fa-chevron-left"></i></button>
-                        <button onclick="onChangeQuantity(${item.id})">${
-        item.quantity
-      }</button>
+                        <button onclick="onChangeQuantity(${
+                          item.id
+                        })" id="quantityNumber">${item.quantity}</button>
                         <button onclick="onUpQuantity(${
                           item.id
                         })"><i class="fa-solid fa-chevron-right"></i></button>
@@ -34,7 +36,11 @@ function renderProductCart() {
                       </td>
                       <td class="cart_prod_totalPrice"><p>${
                         item.price * item.quantity
-                      }</p></td>
+                      }</p>
+                     </td>
+                     <td> <button class="deleteProduct" onclick="onDeleteThisProduct(${
+                       item.id
+                     })"><i class="fa-solid fa-trash-can"></i></button></td>
                     </tr>`;
     }
   });
@@ -45,7 +51,7 @@ function renderProductCart() {
   let indexOfUser = usersDB.findIndex((item) => item.id == userAfterFind.id);
   usersDB[indexOfUser] = userAfterFind;
   localStorage.setItem("users", JSON.stringify(usersDB));
-  cartTotal.innerHTML = "$ " + Number(priceOfProduct);
+  cartTotal.innerHTML = Number(priceOfProduct);
   totalPrice.innerHTML = "$ " + Number(priceOfProduct);
 }
 renderProductCart();
@@ -84,4 +90,25 @@ function onUpQuantity(id) {
   window.location.reload();
 }
 // function upQuantity--------------------------------------------------------------------------------------------------------------
+function onDeleteThisProduct(id) {
+  let userStillLoginDB = getAllItems("userStillLogin");
+  let usersDB = getAllItems("users");
+  let userAfterFind = usersDB.find((item) => item.id == userStillLoginDB.id);
+  let cart = userAfterFind.cart;
+  let cartArray = cart.findIndex((item) => item.id == id);
+  if (cartArray != -1) {
+    let popUp = "Are you sure you want to delete this product ?";
+    if (confirm(popUp) == true) {
+      cart[cartArray] = {
+        ...cart[cartArray],
+        quantity: (cart[cartArray].quantity = 0),
+      };
+      window.location.reload();
+    }
+  }
+  let indexOfUser = usersDB.findIndex((item) => item.id == userAfterFind.id);
+  usersDB[indexOfUser] = userAfterFind;
+  localStorage.setItem("users", JSON.stringify(usersDB));
+}
+
 // function onChangeQuantity() {}

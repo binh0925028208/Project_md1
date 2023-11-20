@@ -201,6 +201,10 @@ p {
     gap: 10px;
 }
 
+.store_product p {
+    color: #0121f2;
+}
+
 .store_product_list {
     display: flex;
     align-items: center;
@@ -262,7 +266,7 @@ p {
     background-color: rgb(243, 84, 84);
     color: black;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 14px;
     transition: 0.5s;
 }
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./loginAdmin.css" />
+    <link
+      rel="shortcut icon"
+      href="../../Assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Admin Login</title>
+  </head>
+  <body>
+    <div class="admin_body">
+      <div class="display_login_box">
+        <h2>ADMIN LOGIN</h2>
+        <div class="login_box">
+          <div class="id_box">
+            <i class="fa-regular fa-user fa-beat-fade"></i>
+            <input
+              type="email"
+              id="admin_email"
+              placeholder="Your email"
+              required
+            />
+          </div>
+          <div class="id_box">
+            <i class="fa-regular fa-eye fa-beat-fade"></i>
+            <input
+              type="password"
+              id="admin_pass"
+              placeholder="Your password"
+              required
+            />
+          </div>
+          <button onclick="loginSubmit()" class="sign_btn">Sign in</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./loginAdmin.js"></script>
+  <script src="../../Models/adminLoginDB.js"></script>
+  <script src="../../Repositories/repositories.js"></script>
+</html>

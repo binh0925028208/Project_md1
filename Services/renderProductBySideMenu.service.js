@@ -1,7 +1,6 @@
 const list = document.querySelectorAll(".sideIndex");
 list.forEach((item, index) => {
   item.addEventListener("click", function () {
-    console.log("tesst");
     document.querySelector(".store_sort").classList.add("storeSortList");
     list.forEach((item) => {
       item.classList.remove("active");

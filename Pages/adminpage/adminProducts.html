@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Product's page</title>
+    <link rel="stylesheet" href="./ad.css" />
+    <link rel="stylesheet" href="./adminProducts.css" />
+    <link rel="stylesheet" href="../../Components/global.css" />
+    <link
+      rel="shortcut icon"
+      href="../../Assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="header" id="header"></section>
+    <section class="admin_body">
+      <div class="side_menu" id="admin_side_menu"></div>
+      <div class="admin_main">
+        <h2 id="function_title">Products List :</h2>
+        <div class="admin_products" id="admin_display_product">
+          <table class="database">
+            <tbody class="table_head">
+              <tr>
+                <th class="table_id"><strong>ID</strong></th>
+                <th class="table_img"><strong>IMAGE</strong></th>
+                <th class="table_name"><strong>PRODUCT</strong></th>
+                <th class="table_stock"><strong>STOCK</strong></th>
+                <th class="table_payment"><strong>PRICE</strong></th>
+                <th class="table_edit"><strong>EDITING</strong></th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <div id="popup_for_admin"></div>
+    <script src="./ad.js"></script>
+    <script src="../../Components/renderAdmin.js"></script>
+    <script src="../../Repositories/repositories.js"></script>
+    <script src="./renderProductsInAD.js"></script>
+    <script>
+      renderAdminTotalBody();
+      renderProductsAdmin();
+    </script>
+  </body>
+</html>

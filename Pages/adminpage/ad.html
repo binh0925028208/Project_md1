@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>admin page</title>
+    <title>Admin Management</title>
     <link rel="stylesheet" href="./ad.css" />
-    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="../../Components/global.css" />
+    <link
+      rel="shortcut icon"
+      href="../../Assets/img/favicon.ico"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -15,125 +20,119 @@
     />
   </head>
   <body>
-    <section class="header">
-      <div class="header_box1">
-        <div class="header_symbol"></div>
-        <div class="header_select">
-          <select name="pages" id="select">
-            <option value="pages">Pages</option>
-            <option value="login">Login</option>
-            <option value="product">Product</option>
-          </select>
-        </div>
-        <div class="header_select">
-          <select name="pages" id="select">
-            <option value="pages">Features</option>
-            <option value="login">Login</option>
-            <option value="product">Product</option>
-          </select>
-        </div>
-        <div class="header_select">
-          <select name="pages" id="select">
-            <option value="pages">Apps</option>
-            <option value="login">Login</option>
-            <option value="product">Product</option>
-          </select>
-        </div>
-      </div>
-      <div class="header_box2">
-        <div class="header_box2_icon">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-        <div class="header_box2_icon">
-          <i class="fa-solid fa-bell"></i>
-        </div>
-        <div class="header_box2_icon">
-          <i class="fa-solid fa-gear"></i>
-        </div>
-        <div class="header_box2_icon">
-          <i class="fa-solid fa-cart-plus"></i>
-        </div>
-        <div class="header_box2_icon">
-          <i class="fa-solid fa-earth-americas"></i>
-        </div>
-        <div class="header_box2_text">
-          <p>Hi, admin</p>
-        </div>
-        <div class="admin_avatar"></div>
-      </div>
-    </section>
+    <section class="header" id="header"></section>
     <section class="admin_body">
-      <div class="side_menu">
-        <div class="dashboard">
-          <div class="dashBoard_minibox">
-            <img src="/assets/admin_img/box.png" alt="" />
-            <p>Dashboard</p>
+      <div class="side_menu" id="admin_side_menu"></div>
+      <div class="admin_main">
+        <h2 id="function_title">Dashboard :</h2>
+        <div
+          class="admin_dashboard"
+          id="admin_display_dashboard"
+          onclick="onDashBoard()"
+        >
+          <div class="admin_display_detail">
+            <div class="admin_button">
+              <a
+                class="admin_box_1"
+                href="http://127.0.0.1:5500/Pages/adminpage/admiOrders.html"
+              >
+                <div class="admin_box_detail">
+                  <h3>Orders</h3>
+                  <div class="admin_mini_box_infor">
+                    <p>Total :</p>
+                    <p id="totalOrders"></p>
+                  </div>
+                </div>
+                <div class="admin_box_icon">
+                  <i class="fa-solid fa-cart-arrow-down"></i>
+                </div>
+              </a>
+              <a
+                class="admin_box_2"
+                href="http://127.0.0.1:5500/Pages/adminpage/adminUser.html"
+              >
+                <div class="admin_box_detail">
+                  <h3>Users</h3>
+                  <div class="admin_mini_box_infor">
+                    <p>Total :</p>
+                    <p id="totalUsers"></p>
+                  </div>
+                </div>
+                <div class="admin_box_icon">
+                  <i class="fa-solid fa-user-group"></i>
+                </div>
+              </a>
+              <a
+                class="admin_box_3"
+                href="http://127.0.0.1:5500/Pages/adminpage/adminProducts.html"
+              >
+                <div class="admin_box_detail">
+                  <h3>Products</h3>
+                  <div class="admin_mini_box_infor">
+                    <p>Total :</p>
+                    <p id="totalProducts"></p>
+                  </div>
+                </div>
+                <div class="admin_box_icon">
+                  <i class="fa-solid fa-box"></i>
+                </div>
+              </a>
+            </div>
+            <div class="admin_button">
+              <a class="admin_box_4" href="">
+                <div class="admin_box_detail">
+                  <h3>Revenue</h3>
+                  <div class="admin_mini_box_infor">
+                    <p>Total :</p>
+                    <p id="totalRevenue"></p>
+                  </div>
+                </div>
+                <div class="admin_box_icon">
+                  <i class="fa-solid fa-sack-dollar"></i>
+                </div>
+              </a>
+              <a class="admin_box_5" href="">
+                <div class="admin_box_detail">
+                  <h3>Stock</h3>
+                  <div class="admin_mini_box_infor">
+                    <p>Total :</p>
+                    <p id="totalStock"></p>
+                  </div>
+                </div>
+                <div class="admin_box_icon">
+                  <i class="fa-solid fa-boxes-stacked"></i>
+                </div>
+              </a>
+              <a class="admin_box_6" href="">
+                <div class="admin_box_detail">
+                  <h3>Out-stock:</h3>
+                  <div class="admin_mini_box_infor">
+                    <p>Total :</p>
+                    <p id="totalOutStocks"></p>
+                  </div>
+                </div>
+                <div class="admin_box_icon">
+                  <i class="fa-solid fa-dolly"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="admin_shop_data">
+            <img
+              src="../../Assets/admin_img/7-73226_comingsoon-coming-soon-logo-animation.png"
+              alt=""
+            />
           </div>
         </div>
-        <div class="custom_board">
-          <h2>PAGES</h2>
-          <div class="mini_box">
-            <img src="/assets/admin_img/Box3.png" alt="" />
-            <p>User</p>
-          </div>
-          <div class="mini_box">
-            <img src="/assets/admin_img/Barcode read.png" alt="" />
-            <p>Product</p>
-          </div>
-          <div class="mini_box">
-            <img src="/assets/admin_img/Compiling.png" alt="" />
-            <p>Cart</p>
-          </div>
-        </div>
-        <div class="custom_board">
-          <h2>LAYOUT</h2>
-          <div class="mini_box">
-            <img src="/assets/admin_img/Settings.png" alt="" />
-            <p>General</p>
-          </div>
-          <div class="mini_box">
-            <img src="/assets/admin_img/Library.png" alt="" />
-            <p>Builder</p>
-          </div>
-        </div>
-        <div class="custom_board">
-          <h2>INFORMATION</h2>
-          <div class="mini_box">
-            <img src="/assets/admin_img/Layout-Vertical.png" alt="" />
-            <p>Forms</p>
-          </div>
-          <div class="mini_box">
-            <img src="/assets/admin_img/Layout-left-panel-2.png" alt="" />
-            <p>KTDatabase</p>
-          </div>
-          <div class="mini_box">
-            <img src="/assets/admin_img/Layout-horizontal.png" alt="" />
-            <p>Datatables.net</p>
-          </div>
-        </div>
-        <div class="custom_board">
-          <h2>COMPONENTS</h2>
-          <div class="mini_box">
-            <img src="/assets/admin_img/Box3.png" alt="" />
-            <p>Base</p>
-          </div>
-          <div class="mini_box">
-            <img src="/assets/admin_img/Pictures.png" alt="" />
-            <p>Custom</p>
-          </div>
-          <div class="mini_box">
-            <img src="/assets/admin_img/Mirror.png" alt="" />
-            <p>Extended</p>
-          </div>
-          <div class="mini_box">
-            <img src="/assets/admin_img/Attachment 2.png" alt="" />
-            <p>Icons</p>
-          </div>
-        </div>
-      </div>
-      <div class="main_menu">
-        <div class="menu_box"></div>
       </div>
     </section>
+    <script src="./ad.js"></script>
+    <script src="../../Repositories/repositories.js"></script>
+    <script src="../../Components/renderAdmin.js"></script>
+    <script>
+      renderAdmin();
+      renderAdminTotalBody();
+      renderAvatarAdmin();
+    </script>
   </body>
 </html>

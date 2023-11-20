@@ -12,6 +12,6 @@ const orders = [
     payment: 1, //1 là thanh toán khi nhận hàng, 2 là thanh toán trực tuyến
   },
 ];
-if (!JSON.parse(localStorage.getItem("orders"))) {
-  localStorage.setItem("orders", JSON.stringify(orders));
-}
+// if (!JSON.parse(localStorage.getItem("orders"))) {
+//   localStorage.setItem("orders", JSON.stringify(orders));
+// }

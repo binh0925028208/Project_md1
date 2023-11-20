@@ -26,10 +26,10 @@ function renderFooter() {
         <h3>CUSTOMER SERVICES</h3>
       </div>
       <div class="footer_box_infor">
-        <a href="">Introduction</a>
-        <a href="">Contract</a>
-        <a href="">Wholesale policy</a>
-        <a href="">How to buy</a>
+        <a href="#">Introduction</a>
+        <a href="#">Contract</a>
+        <a href="#">Wholesale policy</a>
+        <a href="#">How to buy</a>
       </div>
     </div>
     <div class="footer_box">
@@ -37,10 +37,10 @@ function renderFooter() {
         <h3>OUR POLICIESS</h3>
       </div>
       <div class="footer_box_infor">
-        <a href="">Warranty Policy</a>
-        <a href="">Privacy Policy</a>
-        <a href="">Shipping Policy</a>
-        <a href="">Payment Policy</a>
+        <a href="#">Warranty Policy</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Shipping Policy</a>
+        <a href="#">Payment Policy</a>
       </div>
     </div>
     <div class="footer_box">
@@ -59,9 +59,9 @@ function renderFooter() {
   </div>
   <div class="footer_border"></div>
   <div class="footer_bottom">
-    <p>Copyright 2023 © GUNDAMUNIVERSE</p>
+    <p>Copyright 2023 © Gundam Universe</p>
     <div class="footer_bottom_social">
-      <p>FOLLOW US</p>
+      <p>Follow Us</p>
       <i class="fa-brands fa-facebook"></i>
       <i class="fa-brands fa-instagram"></i>
       <i class="fa-brands fa-tiktok"></i>
@@ -70,3 +70,4 @@ function renderFooter() {
   </div>
  `;
 }
+renderFooter();
