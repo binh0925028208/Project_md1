@@ -1,6 +1,6 @@
 function renderOrder() {
   let ordersDB = getAllItems("orders");
-  let ordersList = document.querySelector(".table_head");
+  let ordersList = document.querySelector(".table_body");
   ordersDB.forEach((item, index) => {
     switch (item.status) {
       case 2:

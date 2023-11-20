@@ -191,7 +191,7 @@ html {
     padding-top: 100px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 10px;
 }
 
 #function_title {
@@ -281,12 +281,15 @@ html {
 
 .table_head {
     text-align: center;
-    overflow-y: scroll;
     background-color: #6d6ec4;
 }
 
 .table_head th {
     color: white;
+}
+
+.table_body {
+    text-align: center;
 }
 
 .table_id {
@@ -379,17 +382,17 @@ td {
 }
 
 .table_show_cart button {
-    font-size: 18px;
+    font-size: 20px;
     height: 40px;
     width: 50px;
     border-radius: 10px;
     border: none;
+    background-color: transparent;
 }
 
 .table_show_cart button:hover {
     cursor: pointer;
-    color: white;
-    background-color: rgb(226, 91, 91);
+    color: red;
 }
 
 .toolTip {
@@ -401,4 +404,42 @@ td {
     background-color: transparent;
     font-size: 20px;
     border: none;
+}
+
+.pagination {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.page {
+    display: flex;
+    gap: 20px;
+}
+
+.page span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+}
+
+.page span:hover {
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+
+}
+
+.active {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(150, 148, 148);
+    color: white;
 }

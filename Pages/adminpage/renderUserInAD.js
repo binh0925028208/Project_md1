@@ -1,6 +1,6 @@
 function renderUsers() {
   let userDB = getAllItems("users");
-  let userList = document.querySelector(".table_head");
+  let userList = document.querySelector(".table_body");
   userDB.forEach((item, index) => {
     switch (item.status) {
       case 1:
@@ -15,7 +15,7 @@ function renderUsers() {
         item.role = "ADMIN";
         break;
       default:
-        item.role = "GUEST";
+        item.role = "USER";
         break;
     }
     userList.innerHTML += ` <div class="table_info">
@@ -39,6 +39,8 @@ function renderUsers() {
   </div>`;
   });
 }
+//
+
 function onAddAdmin(id, event) {
   let usersDB = getAllItems("users");
   let findUser = usersDB.find((item) => item.id == id);

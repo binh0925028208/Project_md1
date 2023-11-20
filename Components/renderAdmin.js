@@ -4,21 +4,21 @@ function renderAdminTotalBody() {
   headerContent.innerHTML = `<div class="header_box1">
   <!-- <a href="http://127.0.0.1:5500/index.html" class="header_symbol"></a> -->
   <div class="header_select">
-    <select name="pages" id="select">
+    <select name="pages" id="select" style="visibility: hidden;">
       <option value="pages">Loading...</option>
       <option value="login">Loading...</option>
       <option value="product">Loading...</option>
     </select>
   </div>
   <div class="header_select">
-    <select name="pages" id="select">
+    <select name="pages" id="select" style="visibility: hidden;"
       <option value="pages">Loading...</option>
       <option value="login">Loading...</option>
       <option value="product">Loading...</option>
     </select>
   </div>
   <div class="header_select">
-    <select name="pages" id="select">
+    <select name="pages" id="select" style="visibility: hidden;">
       <option value="pages">Loading...</option>
       <option value="login">Loading...</option>
       <option value="product">Loading...</option>
@@ -86,7 +86,7 @@ function renderAdminTotalBody() {
     <p>Orders</p>
   </a>
 </div>
-<div class="custom_board">
+<div class="custom_board" style="visibility: hidden;">
   <h2>Loading...</h2>
   <div class="mini_box">
     <img src="/assets/admin_img/Settings.png" alt="" />
@@ -97,7 +97,7 @@ function renderAdminTotalBody() {
     <p>Loading...</p>
   </div>
 </div>
-<div class="custom_board">
+<div class="custom_board" style="visibility: hidden;">
   <h2>Loading...</h2>
   <div class="mini_box">
     <img src="/assets/admin_img/Layout-Vertical.png" alt="" />
@@ -112,7 +112,7 @@ function renderAdminTotalBody() {
     <p>Loading...</p>
   </div>
 </div>
-<div class="custom_board">
+<div class="custom_board" style="visibility: hidden;">
   <h2>Loading...</h2>
   <div class="mini_box">
     <img src="/assets/admin_img/Box3.png" alt="" />
@@ -147,7 +147,7 @@ function renderAvatarAdmin() {
 function onLogOutAdmin() {
   let popUp = "Are you sure you want to logout ?";
   if (confirm(popUp) == true) {
-    let adminLogOutData = JSON.parse(localStorage.getItem("adminStillLogin"));
+    let adminLogOutData = getAllItems("adminStillLogin");
     adminLogOutData = [];
     localStorage.setItem("adminStillLogin", JSON.stringify(adminLogOutData));
     window.location.href =

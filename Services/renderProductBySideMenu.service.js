@@ -1,6 +1,7 @@
 const list = document.querySelectorAll(".sideIndex");
 list.forEach((item, index) => {
   item.addEventListener("click", function () {
+    document.getElementById("showSortBtn").style.display = "block";
     document.querySelector(".store_sort").classList.add("storeSortList");
     list.forEach((item) => {
       item.classList.remove("active");
@@ -48,7 +49,7 @@ function renderProducts(modelScale) {
 
   listOfProduct.innerHTML = "";
   dataLocal.forEach((item, index) => {
-    if (item.scale == modelScale && item.isDelete == 1) {
+    if (item.scale == modelScale && item.isDelete == 1 && item.stock > 0) {
       listOfProduct.innerHTML += `
         <div class="store_product">
         <div class="product_img">
@@ -61,3 +62,27 @@ function renderProducts(modelScale) {
     }
   });
 }
+
+// function comparePrice(a, b) {
+//   return a - b;
+// }
+// function sortPriceDown() {
+//   const dataLocal = getAllItems("products");
+//   const listOfProduct = document.querySelector(".storeSortList");
+//   const productSort = dataLocal.price;
+//   productSort.sort(comparePrice);
+//   console.log(productSort);
+// dataLocal.forEach((item, index) => {
+//   if (item.scale == modelScale && item.isDelete == 1 && item.stock > 0) {
+//     listOfProduct.innerHTML += `
+//       <div class="store_product">
+//       <div class="product_img">
+//                 <img src="${item.img}" alt="" onclick="searchIdProduct(${item.id})"/>
+//                 </div>
+//                 <h4 onclick="searchIdProduct(${item.id})">${item.productName}</h4>
+//                 <p>${item.price}$</p>
+//                 <button class="buyBtn"  onclick="onAddToCart(${item.id})">ADD TO CART</button>
+//                 </div>`;
+//   }
+// });
+// }

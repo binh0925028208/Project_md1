@@ -1,11 +1,14 @@
-function renderProductsAdmin() {
-  let productsDB = getAllItems("products");
-  let productsList = document.querySelector(".table_head");
-  productsDB.forEach((item, index) => {
+function renderListOfProduct(page = 1) {
+  let productsDB = JSON.parse(localStorage.getItem("products"));
+  let productsList = document.querySelector(".table_body");
+  let currentPage = (page - 1) * 5;
+  let result = productsDB.splice(currentPage, 5);
+  productsList.innerHTML = "";
+  result.forEach((item, index) => {
     if (item.isDelete == 1) {
       productsList.innerHTML += ` <div class="table_info">
     <tr class="table_row" >
-      <td><p>${item.id}</p></td>
+    <td>${page === 1 ? `${index + 1} ` : `${index + 1 + 3 * (page - 1)}`}</td> 
       <td><img src="../../${item.img}" width ="180px" height="100px"></td>
       <td><p>${item.productName}</p></td>
       <td><p>${item.stock}</p></td>
@@ -28,8 +31,8 @@ function renderProductsAdmin() {
   </div>`;
     } else {
       productsList.innerHTML += ` <div class="table_info" >
-    <tr class="table_row" style="opacity: 0.8" >
-      <td><p>${item.id}</p></td>
+    <tr class="table_row" style="text-decoration: line-through;" >
+    <td>${page === 1 ? `${index + 1} ` : `${index + 1 + 3 * (page - 1)}`}</td> 
       <td><img src="../../${item.img}" width ="180px" height="100px"></td>
       <td><p>${item.productName}</p></td>
       <td><p>${item.stock}</p></td>
@@ -53,6 +56,40 @@ function renderProductsAdmin() {
     }
   });
 }
+renderListOfProduct();
+// Render number pagination
+function renderPageProducts(OnePage, total) {
+  let result = Math.ceil(total / OnePage);
+  let numberList = document.getElementById("pageProduct");
+  numberList.innerHTML = "";
+  for (let index = 1; index <= result; index++) {
+    numberList.innerHTML += `
+    <span onclick="renderListOfProduct(${index})" class="pageIndex">${index}</span>
+    `;
+  }
+}
+// Render list number pagination
+function renderUiPageProduct() {
+  let productsDB = JSON.parse(localStorage.getItem("products"));
+  let pagination = document.getElementById("paginationProduct");
+  pagination.innerHTML = `
+    <div id="pageProduct" class="page">    
+    </div>
+  `;
+  renderPageProducts(5, productsDB.length);
+}
+renderUiPageProduct();
+// ------------------ page render
+const list = document.querySelectorAll(".pageIndex");
+list.forEach((item, index) => {
+  item.addEventListener("click", function () {
+    list.forEach((item) => {
+      item.classList.remove("active");
+    });
+    item.classList.add("active");
+  });
+});
+
 function onDeleteProductsBtn(id) {
   let popUp = "Are You sure you want to delete this ?";
   if (confirm(popUp) == true) {

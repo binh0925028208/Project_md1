@@ -174,6 +174,30 @@ p {
     padding-left: 30px;
 }
 
+.store_title_after_search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sort_button {
+    padding-right: 50px;
+    display: none;
+}
+
+.sort_button button {
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    border: none;
+    font-size: 30px;
+}
+
+.sort_button button:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+    border-radius: 50%;
+}
 
 #title_product {
     color: #726c6c;

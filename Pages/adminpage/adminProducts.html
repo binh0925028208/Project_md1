@@ -28,7 +28,7 @@
         <h2 id="function_title">Products List :</h2>
         <div class="admin_products" id="admin_display_product">
           <table class="database">
-            <tbody class="table_head">
+            <thead class="table_head">
               <tr>
                 <th class="table_id"><strong>ID</strong></th>
                 <th class="table_img"><strong>IMAGE</strong></th>
@@ -37,8 +37,10 @@
                 <th class="table_payment"><strong>PRICE</strong></th>
                 <th class="table_edit"><strong>EDITING</strong></th>
               </tr>
-            </tbody>
+            </thead>
+            <tbody class="table_body"></tbody>
           </table>
+          <div id="paginationProduct" class="pagination"></div>
         </div>
       </div>
     </section>
@@ -48,8 +50,8 @@
     <script src="../../Repositories/repositories.js"></script>
     <script src="./renderProductsInAD.js"></script>
     <script>
+      renderListOfProduct();
       renderAdminTotalBody();
-      renderProductsAdmin();
     </script>
   </body>
 </html>
