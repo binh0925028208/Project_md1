@@ -9,7 +9,7 @@ const admins = [
     status: 1, //1 là active, 2 là block
   },
 ];
-// if (!JSON.parse(localStorage.getItem("admins"))) {
-//   localStorage.setItem("admins", JSON.stringify(admins));
-// }
+if (!JSON.parse(localStorage.getItem("admins"))) {
+  localStorage.setItem("admins", JSON.stringify(admins));
+}
 // localStorage.setItem("users", JSON.stringify(users));

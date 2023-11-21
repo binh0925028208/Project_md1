@@ -45,19 +45,19 @@ function renderHeader() {
       <a href="../../index.html">HOME</a>
     </div>
     <div class="nav">
-      <a href="#">!</a>
+      <a href="#">Introduce</a>
     </div>
     <div class="nav">
-      <a href="#">!</a>
+      <a href="#">How to buy</a>
     </div>
     <div class="nav">
-    <a href="#">!</a>
+    <a href="#">Video</a>
     </div>
     <div class="nav">
-    <a href="#">!</a>
+    <a href="#">Contract</a>
     </div>
     <div class="nav">
-    <a href="#">!</a>
+    <a href="#">News</a>
     </div>
     </div>
     </section>`;

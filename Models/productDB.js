@@ -613,7 +613,7 @@ const products = [
   //   desc: "The FA-7enes!",
   // },
 ];
-// if (!JSON.parse(localStorage.getItem("products"))) {
-//   localStorage.setItem("products", JSON.stringify(products));
-// }
+if (!JSON.parse(localStorage.getItem("products"))) {
+  localStorage.setItem("products", JSON.stringify(products));
+}
 // localStorage.setItem("products", JSON.stringify(products));

@@ -83,6 +83,7 @@ function onShowCart(id) {
   let findOrder = ordersDB.find((item) => item.id == id);
   let showUpCart = document.getElementById("history_table");
   let findCart = findOrder.cart;
+  showUpCart.innerHTML = ``;
   findCart.forEach((item) => {
     showUpCart.innerHTML += `
     <tr id="showUpCartInfor_list">
@@ -118,13 +119,12 @@ function onClosePopUp() {
 function onCancel(id) {
   let popUp = "Are you sure you want to cancel this order ?";
   if (confirm(popUp) == true) {
-    let userStillLoginDB = getAllItems("userStillLogin");
-    let usersDB = getAllItems("users");
+    let orderDB = getAllItems("orders");
     let productsDB = getAllItems("products");
-    let userAfterFind = usersDB.find((item) => item.id == userStillLoginDB.id);
-    let userCart = userAfterFind.cart;
+    let orderAfterFind = orderDB.find((item) => item.id == id);
+    let orderCart = orderAfterFind.cart;
     productsDB.forEach((item, index) => {
-      userCart.forEach((itemCart, index) => {
+      orderCart.forEach((itemCart, index) => {
         if (item.id == itemCart.id) {
           item.stock += itemCart.quantity;
         }

@@ -1,14 +1,10 @@
 function loginSubmit() {
   let email = document.getElementById("admin_email");
   let password = document.getElementById("admin_pass");
-  let usersLoginData = getAllItems("users");
+  let adminLoginData = getAllItems("admins");
   let adminStillLoginData = getAllItems("adminStillLogin");
-  let checkLogin = usersLoginData.find((item) => {
-    return (
-      item.email == email.value &&
-      item.password == password.value &&
-      item.role == 1
-    );
+  let checkLogin = adminLoginData.find((item) => {
+    return item.email == email.value && item.password == password.value;
   });
   if (checkLogin) {
     if (checkLogin.role == 1) {
